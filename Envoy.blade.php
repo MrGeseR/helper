@@ -3,7 +3,7 @@
 
 @story('deploy')
     composer
-    config
+    migration
     permissions
 @endstory
 
@@ -11,8 +11,7 @@
 composer install
 @endtask
 
-@task('config', ['on' => 'localhost'])
-php artisan vendor:publish
+@task('migration', ['on' => 'localhost'])
 php artisan migrate
 @endtask
 
